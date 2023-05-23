@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(helmet());
 
 
 app.set('view engine', 'pug');
